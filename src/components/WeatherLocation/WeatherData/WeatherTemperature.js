@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WeatherIcons from 'react-weathericons';
 
-import { CLOUD, CLOUDY, SUN, RAIN, SNOW, WINDY } from '../constants/weathers';
+import { CLOUD, CLOUDY, SUN, RAIN, SNOW, WINDY } from '../../../constants/weathers';
 
 const icons = {
     [CLOUD]: 'cloud',
