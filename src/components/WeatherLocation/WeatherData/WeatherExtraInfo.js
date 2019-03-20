@@ -8,8 +8,8 @@ const WeatherExtraInfo = (props) => {
 
     return (
         <div className='weatherExtraInfoCont'>
-            <span>{`${humidity}% - `}</span>
-            <span>{`${wind} wind`}</span>
+            <span className='extraInfoText'>{`Humidity: ${humidity}%`}</span>
+            <span className='extraInfoText'>{`Wind: ${wind}`}</span>
         </div>
     );
 };
