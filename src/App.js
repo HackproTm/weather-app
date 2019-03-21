@@ -23,7 +23,7 @@ class App extends Component {
     super();
 
     this.state = {
-      city: 'Select a city'
+      city: null
     }
   }
 
@@ -56,7 +56,11 @@ class App extends Component {
           <Col xs={12} md={6}>
             <Paper zDepth={4}>
               <div className='details'>
-                <ForecastExtended city={city}/>
+                {
+                  city ? 
+                    <ForecastExtended city={city}/> :
+                    <h1>Select first a City</h1>
+                }
               </div>
             </Paper>
           </Col>
