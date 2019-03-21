@@ -1,5 +1,9 @@
+import AppBar from '@material-ui/core/AppBar';
+import { Col, Grid, Row } from 'react-flexbox-grid';
+import Pape from '@material-ui/core/Paper';
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 import LocationList from './components/LocationList'
 import './App.css';
@@ -22,7 +26,13 @@ class App extends Component {
     return (
       <Grid>
         <Row>
-          Titulo
+          <AppBar position='sticky'>
+            <Toolbar>
+              <Typography variant='title' color='inherit'>
+                Weather App
+              </Typography>
+            </Toolbar>
+          </AppBar>
         </Row>
         <Row>
           <Col xs={12} md={6}>
