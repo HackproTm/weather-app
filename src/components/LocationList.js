@@ -3,14 +3,24 @@ import PropTypes from 'prop-types';
 
 import WeatherLocation from './WeatherLocation';
 
-const getWeatherLocations = (cities) => {
-    return (
-        cities.map( city => <WeatherLocation key={city} city={city} />)
-    );
-}
-
 const LocationList = (props) => {
-    const { cities } = props;
+    const { cities, onSelectedLocation } = props;
+
+    const handleWeatherLocationClick = city => {
+        console.log('handleWeatherLocationClick');
+        onSelectedLocation(city);
+    }
+
+    const getWeatherLocations = (cities) => {
+        return (
+            cities.map( city =>
+                <WeatherLocation key={city}
+                                 city={city}
+                                 onWeatherLocationClick={() => handleWeatherLocationClick(city)}
+                />
+            )
+        );
+    }
 
     return (
         <div>
@@ -20,7 +30,8 @@ const LocationList = (props) => {
 }
 
 LocationList.propTypes = {
-    cities: PropTypes.array.isRequired
+    cities: PropTypes.array.isRequired,
+    onSelectedLocation: PropTypes.func
 }
 
 export default LocationList;
