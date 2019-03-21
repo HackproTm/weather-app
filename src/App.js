@@ -1,6 +1,6 @@
 import AppBar from '@material-ui/core/AppBar';
 import { Col, Grid, Row } from 'react-flexbox-grid';
-import Pape from '@material-ui/core/Paper';
+import Paper from '@material-ui/core/Paper';
 import React, { Component } from 'react';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -41,7 +41,9 @@ class App extends Component {
             />
           </Col>
           <Col xs={12} md={6}>
-            <div className='details'></div>
+            <Paper elevation={4}>
+              <div className='details'></div>
+            </Paper>
           </Col>
         </Row>
       </Grid>
