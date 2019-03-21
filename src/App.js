@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
+import ForecastExtended from './components/ForecastExtended';
 import LocationList from './components/LocationList'
 import './App.css';
 
@@ -42,7 +43,9 @@ class App extends Component {
           </Col>
           <Col xs={12} md={6}>
             <Paper elevation={4}>
-              <div className='details'></div>
+              <div className='details'>
+                <ForecastExtended />
+              </div>
             </Paper>
           </Col>
         </Row>
