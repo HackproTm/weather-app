@@ -6,7 +6,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 import ForecastExtended from './components/ForecastExtended';
-import LocationList from './components/LocationList'
+import LocationList from './components/LocationList';
 import './App.css';
 
 const cities = [
@@ -16,7 +16,7 @@ const cities = [
   'Ciudad de México,mx',
   'Madrid,es',
   'Lima,pe'
-]
+];
 
 class App extends Component {
   constructor() {
@@ -24,7 +24,7 @@ class App extends Component {
 
     this.state = {
       city: null
-    }
+    };
   }
 
   handleSelectedLocation = city => {

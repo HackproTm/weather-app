@@ -10,7 +10,7 @@ const LocationList = (props) => {
     const handleWeatherLocationClick = city => {
         console.log('handleWeatherLocationClick');
         onSelectedLocation(city);
-    }
+    };
 
     const getWeatherLocations = (cities) => {
         return (
@@ -21,7 +21,7 @@ const LocationList = (props) => {
                 />
             )
         );
-    }
+    };
 
     return (
         <div className='locationList'>
@@ -33,6 +33,6 @@ const LocationList = (props) => {
 LocationList.propTypes = {
     cities: PropTypes.array.isRequired,
     onSelectedLocation: PropTypes.func
-}
+};
 
 export default LocationList;
