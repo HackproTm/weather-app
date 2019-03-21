@@ -1,23 +1,18 @@
 import React, { Component } from 'react';
 
+import { api_weather } from '../../constants/apiWeather';
 import Location from './Location';
+import { RAIN } from '../../constants/weathers';
+import transformWeather from '../../services/transformWeather';
 import WeatherData from './WeatherData';
-import { RAIN, SUN } from '../../constants/weathers';
 
-import './styles.css';
+import './styles.css'; 
 
 const data = {
     temperature: 5,
     weatherState: RAIN,
     humidity: 10,
     wind: '10 m/s'
-}
-
-const data2 = {
-    temperature: 35,
-    weatherState: SUN,
-    humidity: 80,
-    wind: '5 m/s'
 }
 
 class WeatherLocation extends Component {
@@ -30,10 +25,13 @@ class WeatherLocation extends Component {
     }
 
     handleUpdateClick = () => {
-        console.log('Updating');
-        this.setState({
-            city: 'Barrancabermeja',
-            data: data2
+        fetch(api_weather).then(resolve => {
+            return resolve.json();
+        }).then(data => {
+            const newData = transformWeather(data);
+            this.setState({
+               data: newData
+            });
         });
     }
 
