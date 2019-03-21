@@ -8,6 +8,7 @@ const LocationList = () => {
             <WeatherLocation city='Bogota,co' />
             <WeatherLocation city='Buenos Aires,ar' />
             <WeatherLocation city='Mexico,mx' />
+            <WeatherLocation city='Washington,us' />
         </div>
     );
 }
