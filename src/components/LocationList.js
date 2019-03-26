@@ -8,7 +8,6 @@ const LocationList = (props) => {
     const { cities, onSelectedLocation } = props;
 
     const handleWeatherLocationClick = city => {
-        console.log('handleWeatherLocationClick');
         onSelectedLocation(city);
     };
 
