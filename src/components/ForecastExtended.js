@@ -50,7 +50,6 @@ class ForecastExtended extends Component {
 
     renderForecastItemDays(forecastData) {
         return forecastData.map( forecast => {
-            console.log(forecast);
             return (
                 <ForecastItem
                     key={`${forecast.weekDay}${forecast.hour}`}
