@@ -1,25 +1,10 @@
+import CircularProgress from '@material-ui/core/CircularProgress';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import ForecastItem from './ForecastItem';
 import transformForecast from '../services/transformForecast';
 import './styles.css';
-/*
-const days = [
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday'
-];
-
-const data = {
-    temperature: 15,
-    weatherState: 'sun',
-    humidity: 10,
-    wind: '10 m/s'
-};
-*/
 
 export const api_key = 'f99bbd9e4959b513e9bd0d7f7356b38d';
 export const url_base_forecast = 'http://api.openweathermap.org/data/2.5/forecast';
@@ -32,8 +17,9 @@ class ForecastExtended extends Component {
         };
     }
 
-    componentDidMount() {
-        const url_forecast = `${url_base_forecast}?q=${this.props.city}&appid=${api_key}`;
+    updateCity = city => {
+        const url_forecast = `${url_base_forecast}?q=${city}&appid=${api_key}`;
+
         fetch(url_forecast).then(
             data => (data.json())
         ).then(
@@ -44,8 +30,24 @@ class ForecastExtended extends Component {
         );
     }
 
+    componentDidMount() {
+        this.updateCity(this.props.city);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.city !== this.props.city) {
+            this.setState( { forecastData: null });
+            this.updateCity(nextProps.city);
+        }
+    }
+
     renderProgress() {
-        return <h3>Loading Forecast Extended</h3>;
+        return (
+            <>
+                <h3>Loading Forecast Extended</h3>
+                <CircularProgress size={50}/>
+            </>
+        );
     }
 
     renderForecastItemDays(forecastData) {
