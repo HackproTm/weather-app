@@ -26,6 +26,7 @@ import { store } from './store';
 =======
 >>>>>>> 0546f79... Leccion 116. Connect
 =======
+<<<<<<< HEAD
 >>>>>>> e52aeae... Leccion 116. Connect
 =======
 import { setCity } from './actions'
@@ -37,6 +38,9 @@ import { store } from './store';
 >>>>>>> 3cae83a... 115. Refactorización de Store y vinculación de Provider
 =======
 >>>>>>> 0546f79... Leccion 116. Connect
+=======
+>>>>>>> 4db53dc610d6deb05a66819b802b16e2d550d2b8
+>>>>>>> 0faea1273046272b227cd38f011b4fc4bb12a199
 
 const cities = [
   'Bogota,co',
@@ -68,6 +72,9 @@ class App extends Component {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0faea1273046272b227cd38f011b4fc4bb12a199
     this.props.setCity(city);
 =======
 =======
@@ -87,6 +94,7 @@ class App extends Component {
 >>>>>>> 0546f79... Leccion 116. Connect
 =======
     this.props.setCity(city);
+<<<<<<< HEAD
 >>>>>>> e52aeae... Leccion 116. Connect
 =======
 >>>>>>> 71faeaa... 112. Creación de store, dispatch de acciones y uso de React Dev Tools
@@ -96,6 +104,9 @@ class App extends Component {
 =======
     this.props.setCity(city);
 >>>>>>> 0546f79... Leccion 116. Connect
+=======
+>>>>>>> 4db53dc610d6deb05a66819b802b16e2d550d2b8
+>>>>>>> 0faea1273046272b227cd38f011b4fc4bb12a199
   }
 
   render() {
