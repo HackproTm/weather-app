@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import ForecastExtended from './components/ForecastExtended';
 import LocationList from './components/LocationList';
 import './App.css';
+import { setCity } from './actions'
 
 const cities = [
   'Bogota,co',
@@ -23,11 +24,6 @@ const store = createStore(
   () => {},
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
-
-const setCity = value => ({
-  type: 'setCity',
-  value
-});
 
 class App extends Component {
   constructor() {
