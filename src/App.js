@@ -26,6 +26,11 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
+const setCity = value => ({
+  type: 'setCity',
+  value
+});
+
 class App extends Component {
   constructor() {
     super();
@@ -41,6 +46,7 @@ class App extends Component {
     });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.props.setCity(city);
 =======
     const action = {
@@ -49,6 +55,9 @@ class App extends Component {
     };
     store.dispatch(action);
 >>>>>>> 71faeaa... 112. Creación de store, dispatch de acciones y uso de React Dev Tools
+=======
+    store.dispatch(setCity(city));
+>>>>>>> b3403fc... 113. Generación de action creator
   }
 
   render() {
