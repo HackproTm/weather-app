@@ -1,6 +1,5 @@
 import AppBar from '@material-ui/core/AppBar';
 import { Col, Grid, Row } from 'react-flexbox-grid';
-import  { createStore } from 'redux';
 import Paper from '@material-ui/core/Paper';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -11,10 +10,15 @@ import ForecastExtended from './components/ForecastExtended';
 import LocationList from './components/LocationList';
 import './App.css';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { setCity } from './actions';
 =======
 import { setCity } from './actions'
 >>>>>>> 859d92c... 114. Mejora a action creator
+=======
+import { setCity } from './actions';
+import { store } from './store';
+>>>>>>> 3cae83a... 115. Refactorización de Store y vinculación de Provider
 
 const cities = [
   'Bogota,co',
@@ -24,11 +28,6 @@ const cities = [
   'Madrid,es',
   'Lima,pe'
 ];
-
-const store = createStore(
-  () => {},
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
 
 class App extends Component {
   constructor() {
