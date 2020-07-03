@@ -1,5 +1,6 @@
 import AppBar from '@material-ui/core/AppBar';
 import { Col, Grid, Row } from 'react-flexbox-grid';
+import  { createStore } from 'redux';
 import Paper from '@material-ui/core/Paper';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -20,6 +21,11 @@ const cities = [
   'Lima,pe'
 ];
 
+const store = createStore(
+  () => {},
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
 class App extends Component {
   constructor() {
     super();
@@ -34,7 +40,15 @@ class App extends Component {
       city
     });
 
+<<<<<<< HEAD
     this.props.setCity(city);
+=======
+    const action = {
+      type: 'setCity',
+      value: city
+    };
+    store.dispatch(action);
+>>>>>>> 71faeaa... 112. Creación de store, dispatch de acciones y uso de React Dev Tools
   }
 
   render() {
