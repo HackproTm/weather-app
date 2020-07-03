@@ -12,6 +12,7 @@ import LocationList from './components/LocationList';
 import './App.css';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { setCity } from './actions';
 <<<<<<< HEAD
 =======
@@ -26,6 +27,9 @@ import { store } from './store';
 >>>>>>> 0546f79... Leccion 116. Connect
 =======
 >>>>>>> e52aeae... Leccion 116. Connect
+=======
+import { setCity } from './actions'
+>>>>>>> 859d92c... 114. Mejora a action creator
 
 const cities = [
   'Bogota,co',
@@ -40,11 +44,6 @@ const store = createStore(
   () => {},
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
-
-const setCity = value => ({
-  type: 'setCity',
-  value
-});
 
 class App extends Component {
   constructor() {
