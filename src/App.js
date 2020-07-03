@@ -32,8 +32,11 @@ import { setCity } from './actions'
 >>>>>>> 859d92c... 114. Mejora a action creator
 =======
 import { setCity } from './actions';
+<<<<<<< HEAD
 import { store } from './store';
 >>>>>>> 3cae83a... 115. Refactorización de Store y vinculación de Provider
+=======
+>>>>>>> 0546f79... Leccion 116. Connect
 
 const cities = [
   'Bogota,co',
@@ -58,6 +61,7 @@ class App extends Component {
       city
     });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,6 +93,9 @@ class App extends Component {
 =======
     store.dispatch(setCity(city));
 >>>>>>> b3403fc... 113. Generación de action creator
+=======
+    this.props.setCity(city);
+>>>>>>> 0546f79... Leccion 116. Connect
   }
 
   render() {
