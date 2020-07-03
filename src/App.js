@@ -12,6 +12,7 @@ import './App.css';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { setCity } from './actions';
+<<<<<<< HEAD
 =======
 import { setCity } from './actions'
 >>>>>>> 859d92c... 114. Mejora a action creator
@@ -22,6 +23,8 @@ import { store } from './store';
 >>>>>>> 3cae83a... 115. Refactorización de Store y vinculación de Provider
 =======
 >>>>>>> 0546f79... Leccion 116. Connect
+=======
+>>>>>>> 4db53dc610d6deb05a66819b802b16e2d550d2b8
 
 const cities = [
   'Bogota,co',
@@ -49,6 +52,7 @@ class App extends Component {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     this.props.setCity(city);
 =======
     const action = {
@@ -63,6 +67,9 @@ class App extends Component {
 =======
     this.props.setCity(city);
 >>>>>>> 0546f79... Leccion 116. Connect
+=======
+    this.props.setCity(city);
+>>>>>>> 4db53dc610d6deb05a66819b802b16e2d550d2b8
   }
 
   render() {
