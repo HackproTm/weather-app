@@ -1,16 +1,13 @@
 import AppBar from '@material-ui/core/AppBar';
 import { Col, Grid, Row } from 'react-flexbox-grid';
-import  PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
 import ForecastExtended from './components/ForecastExtended';
-import LocationList from './components/LocationList';
+import LocationListContainer from './containers/LocationListContainer';
 import './App.css';
-import { setCity } from './actions';
 
 const cities = [
   'Bogota,co',
@@ -30,14 +27,6 @@ class App extends Component {
     };
   }
 
-  handleSelectedLocation = city => {
-    this.setState({
-      city
-    });
-
-    this.props.setCity(city);
-  }
-
   render() {
     const { city } = this.state;
 
@@ -54,9 +43,7 @@ class App extends Component {
         </Row>
         <Row>
           <Col xs={12} md={6}>
-            <LocationList cities={cities}
-                          onSelectedLocation={this.handleSelectedLocation}
-            />
+            <LocationListContainer cities={cities}/>
           </Col>
           <Col xs={12} md={6}>
             <Paper zdepth={4}>
@@ -75,12 +62,4 @@ class App extends Component {
   }
 }
 
-App.propTypes = {
-  setCity: PropTypes.func.isRequired,
-}
-
-const mapDispatchToProps = dispatch => ({
-  setCity: value => dispatch(setCity(value))
-});
-
-export default connect(null, mapDispatchToProps)(App);
+export default App;
