@@ -45,7 +45,7 @@ export const setWeather = payload => {
   }).then(data => {
     const newData = transformWeather(data);
     this.setState({
-    data: newData
-  });
+      data: newData
+    });
   });
 };
