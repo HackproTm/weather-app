@@ -1,3 +1,4 @@
+import toPairs from 'lodash.topairs';
 import { createSelector } from 'reselect';
 
 import { GET_WEATHER_CITY, SET_FORECAST_DATA, SET_WEATHER_CITY } from '../actions';
@@ -26,7 +27,9 @@ export const getForecastDataFromCities = createSelector(
   forecastData => forecastData
 );
 
+const fromObjToArray = cities => (toPairs(cities).map(([key, value]) => ({ key, name: key, data: value.weather })));
+
 export const getWeatherCities = createSelector(
-  state => [],
+  state => fromObjToArray(state),
   cities => cities
 );
