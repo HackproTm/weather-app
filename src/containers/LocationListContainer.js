@@ -7,7 +7,6 @@ import LocationList from '../components/LocationList';
 import { getWeatherCities } from '../reducers';
 
 class LocationListContainer extends Component {
-  
   componentDidMount() {
     this.props.setWeather(this.props.cities);
   }

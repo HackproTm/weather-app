@@ -12,13 +12,14 @@ const LocationList = (props) => {
   };
 
   const getWeatherLocations = (cities) => {
-    cities.map( city =>
-      <WeatherLocation
-        key={city.key}
-        city={city.name}
-        onWeatherLocationClick={() => handleWeatherLocationClick(city.name)}
-        data={city.data}
-      />
+    return (
+      cities.map( city =>
+        <WeatherLocation key={city.key}
+          city={city.name}
+          onWeatherLocationClick={() => handleWeatherLocationClick(city.name)}
+          data={city.data}
+        />
+      )
     );
   };
 
